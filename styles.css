@@ -1,0 +1,10 @@
+img{
+    border: 4px dashed black;
+    width: 160px;
+    height: 250px;
+    margin: 15px;
+}
+
+h1{
+    display: inline-block;
+}

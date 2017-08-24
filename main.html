@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hover In and Out</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $('h1').hover(
+                function(){
+                    $(this).css("color", "red");
+                }, function(){
+                    $(this).css("color", "black");
+                }
+            )
+
+            $('img').hover(function() {
+                var temp = $(this).attr("src");
+                $(this).attr('src',$(this).attr("alt-src"));
+                $(this).attr("alt-src", temp);
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>Hover In and Out</h1><br>
+    <img id="naruto" src="images/naruto00.jpg" alt-src="images/naruto01.jpg" alt="naruto-image">
+    <img id="vegeta" src="images/vegeta00.jpg" alt-src="images/vegeta01.jpg" alt="vegeta-image">
+    <img id="pikachu" src="images/pikachu00.jpg" alt-src="images/pikachu01.jpg" alt="pikachu">
+    <img id="link" src="images/link00.jpg" alt-src="images/link01.jpg" alt="Link">
+</body>
+</html>
